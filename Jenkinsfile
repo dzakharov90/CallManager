@@ -2,7 +2,7 @@ pipeline {
     agent {
         label "мастер"
     }
-    steps {
+    stages {
         stage("Get Deps..") {
             echo "\n\n\n ===== Getting dependense === \n\n\n"
             sh "mix deps.get"
