@@ -7,7 +7,7 @@ pipeline {
         disableConcurrentBuilds()
         timestamps()
     }
-    noode('master'){
+    node('master'){
         stages {
             stage("Get Deps..") {
                 steps {
