@@ -1,4 +1,7 @@
 pipeline {
+    agent {
+        label "мастер"
+    }
     steps {
         stage("Get Deps..") {
             echo "\n\n\n ===== Getting dependense === \n\n\n"
