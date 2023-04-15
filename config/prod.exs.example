@@ -1,0 +1,27 @@
+import Config
+
+config :ecallmanager, Ecallmanager.Routes,
+  port: String.to_integer(System.get_env("PORT") || "3000")
+config :ecallmanager, Ecallmanager.ESLServer,
+  port: String.to_integer(System.get_env("PORT") || "8021")
+
+  config :ecallmanager, osusername: ""
+  config :ecallmanager, ospassword: ""
+  config :ecallmanager, oshostname: ""
+  config :ecallmanager, osdatabase: ""
+
+  config :ecallmanager, fsusername: ""
+  config :ecallmanager, fspassword: ""
+  config :ecallmanager, fshostname: ""
+  config :ecallmanager, fsdatabase: ""
+
+  config :ecallmanager, accusername: ""
+  config :ecallmanager, accpassword: ""
+  config :ecallmanager, acchostname: ""
+  config :ecallmanager, accdatabase: ""
+
+  call_mgt_adapter: Ecallmanager.Callmgm
+
+#config :logger, level: :info, backends: [{ExSyslogger, :ex_syslogger}]
+
+config :ecallmanager, redirect_url: System.get_env("REDIRECT_URL")

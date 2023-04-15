@@ -1,0 +1,16 @@
+import Config
+
+config :ecallmanager, osusername: ""
+config :ecallmanager, ospassword: ""
+config :ecallmanager, oshostname: ""
+config :ecallmanager, osdatabase: ""
+
+config :ecallmanager, fsusername: ""
+config :ecallmanager, fspassword: ""
+config :ecallmanager, fshostname: ""
+config :ecallmanager, fsdatabase: ""
+
+config :ecallmanager, accusername: ""
+config :ecallmanager, accpassword: ""
+config :ecallmanager, acchostname: ""
+config :ecallmanager, accdatabase: ""
