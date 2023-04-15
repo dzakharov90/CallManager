@@ -1,5 +1,5 @@
 pipeline {
-    stages {
+    steps {
         stage("Get Deps..") {
             echo "\n\n\n ===== Getting dependense === \n\n\n"
             sh "mix deps.get"
