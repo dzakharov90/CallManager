@@ -2,15 +2,15 @@ import Config
 
 config :ecallmanager, osusername: ""
 config :ecallmanager, ospassword: ""
-config :ecallmanager, oshostname: ""
-config :ecallmanager, osdatabase: ""
+config :ecallmanager, oshostname: "localhost"
+config :ecallmanager, osdatabase: "opensips"
 
 config :ecallmanager, fsusername: ""
 config :ecallmanager, fspassword: ""
-config :ecallmanager, fshostname: ""
-config :ecallmanager, fsdatabase: ""
+config :ecallmanager, fshostname: "localhost"
+config :ecallmanager, fsdatabase: "freeswitch"
 
 config :ecallmanager, accusername: ""
 config :ecallmanager, accpassword: ""
-config :ecallmanager, acchostname: ""
-config :ecallmanager, accdatabase: ""
+config :ecallmanager, acchostname: "localhost"
+config :ecallmanager, accdatabase: "account_data"
