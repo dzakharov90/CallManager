@@ -1,6 +1,10 @@
 pipeline {
-    agent none
-    node('master') {
+    agent {
+        node {
+            label 'master'
+            customWorkspace '/tmp'
+        }
+    }
         stages {
             stage("Get Deps..") {
                 steps {
@@ -27,5 +31,4 @@ pipeline {
                 }
             }
         }
-    }
 }
