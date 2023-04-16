@@ -1,6 +1,15 @@
 pipeline {
     agent any
     stages {
+        stage("Copying env files...") {
+            steps{
+                script{
+                    sh "cp config/dev.exs.example config/dev.exs"
+                    sh "cp config/test.exs.example config/test.exs"
+                    sh "cp config/prod.exs.example config/prod.exs"
+                }
+            }
+        }
         stage("Get Deps..") {
             steps {
                 script{
