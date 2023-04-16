@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label ("${env.AGENT_NAME}")
-    }
+    agent none
     stages {
         stage("Get Deps..") {
             steps {
