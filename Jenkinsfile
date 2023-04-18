@@ -20,7 +20,7 @@ pipeline {
         }
         stage("Running tests..") {
             steps {
-                withCredentials([usernamePassword (credentialsId: 'postgres', usernameVariable: 'username', passwordVariable: 'password')]) {
+                withCredentials([usernamePassword (credentialsId: 'postgres', usernameVariable: 'CC_UNAME', passwordVariable: 'CC_PASS')]) {
                     script {
                         echo "\n\n\n ===== Running tests === \n\n\n"
                         sh "mix test"
@@ -30,7 +30,7 @@ pipeline {
         }
         stage("Building..") {
             steps {
-                withCredentials([usernamePassword (credentialsId: 'postgres', usernameVariable: 'username', passwordVariable: 'password')]) {
+                withCredentials([usernamePassword (credentialsId: 'postgres', usernameVariable: 'CC_UNAME', passwordVariable: 'CC_PASS')]) {
                     script {
                         echo "\n\n\n ===== Building elixir app === \n\n\n"
                         sh "MIX_ENV=prod mix release"
