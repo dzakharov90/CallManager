@@ -5,18 +5,18 @@ config :ecallmanager, Ecallmanager.Routes,
 config :ecallmanager, Ecallmanager.ESLServer,
   port: String.to_integer(System.get_env("PORT") || "8021")
 
-  config :ecallmanager, osusername: ""
-  config :ecallmanager, ospassword: ""
+  config :ecallmanager, osusername: "${username}"
+  config :ecallmanager, ospassword: "${password}"
   config :ecallmanager, oshostname: "localhost"
   config :ecallmanager, osdatabase: "opensips"
 
-  config :ecallmanager, fsusername: ""
-  config :ecallmanager, fspassword: ""
+  config :ecallmanager, fsusername: "${username}"
+  config :ecallmanager, fspassword: "${password}"
   config :ecallmanager, fshostname: "localhost"
   config :ecallmanager, fsdatabase: "freeswitch"
 
-  config :ecallmanager, accusername: ""
-  config :ecallmanager, accpassword: ""
+  config :ecallmanager, accusername: "${username}"
+  config :ecallmanager, accpassword: "${password}"
   config :ecallmanager, acchostname: "localhost"
   config :ecallmanager, accdatabase: "account_data"
 
