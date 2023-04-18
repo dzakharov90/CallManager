@@ -21,16 +21,20 @@ pipeline {
         stage("Running tests..") {
             steps {
                 script {
-                    echo "\n\n\n ===== Running tests === \n\n\n"
-                    sh "mix test"
+                    withCredentials([string(credentialsId: 'postgres', usernameVariable: 'username', passwordVariable: 'password')]) {
+                        echo "\n\n\n ===== Running tests === \n\n\n"
+                        sh "mix test"
+                    }
                 }
             }
         }
         stage("Building..") {
             steps {
                 script {
-                    echo "\n\n\n ===== Building elixir app === \n\n\n"
-                    sh "MIX_ENV=prod mix release"
+                    withCredentials([string(credentialsId: 'postgres', usernameVariable: 'username', passwordVariable: 'password')]) {
+                        echo "\n\n\n ===== Building elixir app === \n\n\n"
+                        sh "MIX_ENV=prod mix release"
+                    }
                 }
             }
         }
